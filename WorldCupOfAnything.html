@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <link href="styles2.css" rel="stylesheet">
+        <title>World Cup of Anything</title>
+
+        <script type="text/javascript" src="bracketFiller.js"></script>
+
+    </head>
+
+    <body>
+
+        <div id="viewport">
+                        <!-- Sidebar -->
+                        <div id="sidebar">
+                            <ul>
+                                <li>
+                                    <a href="index.html">Home</a>
+                                </li>
+                                <li>
+                                    <a href="Group stages.html">2022 Calendar</a>
+                                    <ul>
+                                        <li>
+                                            <a href="Group stages.html#GroupA">Group A</a>
+                                        </li>
+                                        <li>
+                                            <a href="Group stages.html#GroupB">Group B</a>
+                                        </li>
+                                        <li>
+                                            <a href="Group stages.html#GroupC">Group C</a>
+                                        </li>
+                                        <li>
+                                            <a href="Group stages.html#GroupD">Group D</a>
+                                        </li>
+                                        <li>
+                                            <a href="Group stages.html#GroupE">Group E</a>
+                                        </li>
+                                        <li>
+                                            <a href="Group stages.html#GroupF">Group F</a>
+                                        </li>
+                                        <li>
+                                            <a href="Group stages.html#GroupG">Group G</a>
+                                        </li>
+                                        <li>
+                                            <a href="Group stages.html#GroupH">Group H</a>
+                                        </li>
+                                        <li>
+                                            <a href="Group stages.html#R16">Round of 16</a>
+                                        </li>
+                                        <li>
+                                            <a href="Group stages.html#R8">Quarter Final</a>
+                                        </li>
+                                        <li>
+                                            <a href="Group stages.html#R4">Semifinal</a>
+                                        </li>
+                                        <li>
+                                            <a href="Group stages.html#final">Final</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="HallOfFame.html#Hall">Hall Of Fame</a>
+                                    <ul>
+                                        <li>
+                                            <a href="HallOfFame.html#PastCups">Past Cups</a>
+                                        </li>
+                                        <li>
+                                            <a href="HallOfFame.html#Participation">Participation</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="WorldCupOfAnything.html#Hall">World Cup of Anything</a>
+                                </li>
+                            </ul>
+                        </div>
+
+
+            <!-- Content -->
+            <div id="content">
+                <h1>World Cup of Anything</h1>
+                <br>
+
+                <label>Select competition criteria: </label>
+                <select id="list" onChange="updateBracket()">
+                    <option>---</option>
+                    <option>Beer consumption</option>
+                    <option>CO2 emissions</option>
+                    <option>Covid cases</option>
+                    <option>Coffee consumption</option>
+                    <option>GDP per capita</option>
+                    <option>Forest area</option>
+                    <option>Happiness index</option>
+                    <option>Head coach salary</option>
+                    <option>Homicide rate</option>
+                    <option>Life expectancy</option>
+                    <option>Renewable electricity</option>
+                    <option>Team height</option>
+                    <option>Team value</option>
+                    <option>Women in parliament</option>
+
+                </select>
+
+                <p id="Comment"></p>
+
+                <table>
+                    <tr class="title">
+                        <td>Round of 16</td>
+                        <td class="smallColumn"></td>
+                        <td>Quarter Final</td>
+                        <td class="smallColumn"></td>
+                        <td>Semifinal</td>
+                        <td class="smallColumn"></td>
+                        <td class="final">Final</td>
+                        <td></td>
+                        <td class="smallColumn"></td>
+                        <td>Semifinal</td>
+                        <td class="smallColumn"></td>
+                        <td>Quarter Final</td>
+                        <td class="smallColumn"></td>
+                        <td>Round of 16</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td class="smallColumn"></td>
+                        <td></td>
+                        <td class="smallColumn"></td>
+                        <td></td>
+                        <td class="smallColumn"></td>
+                        <td></td>
+                        <td></td>
+                        <td class="smallColumn"></td>
+                        <td></td>
+                        <td class="smallColumn"></td>
+                        <td></td>
+                        <td class="smallColumn"></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td id="A0" class="colorRound16">A0</td>
+                        <td class="smallColumn"></td>
+                        <td></td>
+                        <td class="smallColumn"></td>
+                        <td></td>
+                        <td class="smallColumn"></td>
+                        <td></td>
+                        <td></td>
+                        <td class="smallColumn"></td>
+                        <td></td>
+                        <td class="smallColumn"></td>
+                        <td></td>
+                        <td class="smallColumn"></td>
+                        <td id="B0" class="colorRound16">B0</td>
+                    </tr>
+                    <tr>
+                        <td id="B1" class="colorRound16">B1</td>
+                        <td class="smallColumn"></td>
+                        <td id="W49" class="colorQuarter">W49</td>
+                        <td class="smallColumn"></td>
+                        <td></td>
+                        <td class="smallColumn"></td>
+                        <td></td>
+                        <td></td>
+                        <td class="smallColumn"></td>
+                        <td></td>
+                        <td class="smallColumn"></td>
+                        <td id="W51" class="colorQuarter">W51</td>
+                        <td class="smallColumn"></td>
+                        <td id="A1" class="colorRound16">A1</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td class="smallColumn"></td>
+                        <td class="colorQuarter"></td>
+                        <td class="smallColumn"></td>
+                        <td></td>
+                        <td class="smallColumn"></td>
+                        <td></td>
+                        <td></td>
+                        <td class="smallColumn"></td>
+                        <td></td>
+                        <td class="smallColumn"></td>
+                        <td class="colorQuarter"></td>
+                        <td class="smallColumn"></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td id="C0" class="colorRound16">C0</td>
+                        <td class="smallColumn"></td>
+                        <td id="W50" class="colorQuarter">W50</td>
+                        <td class="smallColumn"></td>
+                        <td></td>
+                        <td class="smallColumn"></td>
+                        <td></td>
+                        <td></td>
+                        <td class="smallColumn"></td>
+                        <td></td>
+                        <td class="smallColumn"></td>
+                        <td id="W52" class="colorQuarter">W52</td>
+                        <td class="smallColumn"></td>
+                        <td id="D0" class="colorRound16">D0</td>
+                    </tr>
+                    <tr>
+                        <td id="D1" class="colorRound16">D1</td>
+                        <td class="smallColumn"></td>
+                        <td></td>
+                        <td class="smallColumn"></td>
+                        <td id="W57" class="colorSemis">W57</td>
+                        <td class="smallColumn"></td>
+                        <td id="Finalist1"></td>
+                        <td id="Finalist2"></td>
+                        <td class="smallColumn"></td>
+                        <td id="W59" class="colorSemis">W59</td>
+                        <td class="smallColumn"></td>
+                        <td></td>
+                        <td class="smallColumn"></td>
+                        <td id="C1" class="colorRound16">C1</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td class="smallColumn"></td>
+                        <td></td>
+                        <td class="smallColumn"></td>
+                        <td class="colorSemis"></td>
+                        <td class="smallColumn"></td>
+                        <td id="W61" class="colorFinal">W61</td>
+                        <td id="W62" class="colorFinal">W62</td>
+                        <td class="smallColumn"></td>
+                        <td class="colorSemis"></td>
+                        <td class="smallColumn"></td>
+                        <td></td>
+                        <td class="smallColumn"></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td id="E0" class="colorRound16">E0</td>
+                        <td class="smallColumn"></td>
+                        <td></td>
+                        <td class="smallColumn"></td>
+                        <td id="W58" class="colorSemis">W58</td>
+                        <td class="smallColumn"></td>
+                        <td></td>
+                        <td></td>
+                        <td class="smallColumn"></td>
+                        <td id="W60" class="colorSemis">W60</td>
+                        <td class="smallColumn"></td>
+                        <td></td>
+                        <td class="smallColumn"></td>
+                        <td id="F0" class="colorRound16">F0</td>
+                    </tr>
+                    <tr>
+                        <td id="F1" class="colorRound16">F1</td>
+                        <td class="smallColumn"></td>
+                        <td id="W53" class="colorQuarter">W53</td>
+                        <td class="smallColumn"></td>
+                        <td></td>
+                        <td class="smallColumn"></td>
+                        <td></td>
+                        <td></td>
+                        <td class="smallColumn"></td>
+                        <td></td>
+                        <td class="smallColumn"></td>
+                        <td id="W55" class="colorQuarter">W55</td>
+                        <td class="smallColumn"></td>
+                        <td id="E1" class="colorRound16">E1</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td class="smallColumn"></td>
+                        <td class="colorQuarter"></td>
+                        <td class="smallColumn"></td>
+                        <td></td>
+                        <td class="smallColumn"></td>
+                        <td></td>
+                        <td></td>
+                        <td class="smallColumn"></td>
+                        <td></td>
+                        <td class="smallColumn"></td>
+                        <td class="colorQuarter"></td>
+                        <td class="smallColumn"></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td id="G0" class="colorRound16">G0</td>
+                        <td class="smallColumn"></td>
+                        <td id="W54" class="colorQuarter">W54</td>
+                        <td class="smallColumn"></td>
+                        <td></td>
+                        <td class="smallColumn"></td>
+                        <td></td>
+                        <td></td>
+                        <td class="smallColumn"></td>
+                        <td></td>
+                        <td class="smallColumn"></td>
+                        <td id="W56" class="colorQuarter">W56</td>
+                        <td class="smallColumn"></td>
+                        <td id="H0" class="colorRound16">H0</td>
+                    </tr>
+                    <tr>
+                        <td id="H1" class="colorRound16">H1</td>
+                        <td class="smallColumn"></td>
+                        <td></td>
+                        <td class="smallColumn"></td>
+                        <td></td>
+                        <td class="smallColumn"></td>
+                        <td></td>
+                        <td></td>
+                        <td class="smallColumn"></td>
+                        <td></td>
+                        <td class="smallColumn"></td>
+                        <td></td>
+                        <td class="smallColumn"></td>
+                        <td id="G1" class="colorRound16">G1</td>
+                    </tr>
+
+                </table>
+
+            </div>
+        </div>
+    </body>
+</html>
