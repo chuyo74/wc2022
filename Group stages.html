@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <link href="styles.css" rel="stylesheet">
+        <title>World Cup Qatar 2022</title>
+<!--
+        <script>
+
+
+
+        </script>
+        -->
+        <script type="text/javascript" src="functions.js"></script>
+
+    </head>
+
+    <body>
+
+        <div id="viewport">
+            <!-- Sidebar -->
+            <div id="sidebar">
+                <ul>
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="Group stages.html">2022 Calendar</a>
+                        <ul>
+                            <li>
+                                <a href="Group stages.html#GroupA">Group A</a>
+                            </li>
+                            <li>
+                                <a href="Group stages.html#GroupB">Group B</a>
+                            </li>
+                            <li>
+                                <a href="Group stages.html#GroupC">Group C</a>
+                            </li>
+                            <li>
+                                <a href="Group stages.html#GroupD">Group D</a>
+                            </li>
+                            <li>
+                                <a href="Group stages.html#GroupE">Group E</a>
+                            </li>
+                            <li>
+                                <a href="Group stages.html#GroupF">Group F</a>
+                            </li>
+                            <li>
+                                <a href="Group stages.html#GroupG">Group G</a>
+                            </li>
+                            <li>
+                                <a href="Group stages.html#GroupH">Group H</a>
+                            </li>
+                            <li>
+                                <a href="Group stages.html#R16">Round of 16</a>
+                            </li>
+                            <li>
+                                <a href="Group stages.html#R8">Quarter Final</a>
+                            </li>
+                            <li>
+                                <a href="Group stages.html#R4">Semifinal</a>
+                            </li>
+                            <li>
+                                <a href="Group stages.html#final">Final</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="HallOfFame.html#Hall">Hall Of Fame</a>
+                        <ul>
+                            <li>
+                                <a href="HallOfFame.html#PastCups">Past Cups</a>
+                            </li>
+                            <li>
+                                <a href="HallOfFame.html#Participation">Participation</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="WorldCupOfAnything.html#Hall">World Cup of Anything</a>
+                    </li>
+
+                </ul>
+            </div>
+
+            <!-- Content -->
+            <div id="content">
+                <h1 class="groups">Group Stage</h1>
+                <br id="GroupA">
+                <div id="A" class="row">
+                    <h2>Group A</h2>
+                    <div class="column">
+                        <table>
+                            <tr>
+                                <td class="first">Qatar</td>
+                                <td class="result">0-2</td>
+                                <td class="second">Ecuador</td>
+                            </tr>
+                            <tr>
+                                <td class="first">Senegal</td>
+                                <td><button id="2" onclick="updateResult(2)">vs.</button></td>
+                                <td class="second">Netherlands</td>
+                            </tr>
+                            <tr>
+                                <td class="first">Qatar</td>
+                                <td><button id="3" onclick="updateResult(3)">vs.</button></td>
+                                <td class="second">Senegal</td>
+                            </tr>
+                            <tr>
+                                <td class="first">Netherlands</td>
+                                <td><button id="4" onclick="updateResult(4)">vs.</button></td>
+                                <td class="second">Ecuador</td>
+                            </tr>
+                            <tr>
+                                <td class="first">Netherlands</td>
+                                <td><button id="5" onclick="updateResult(5)">vs.</button></td>
+                                <td class="second">Qatar</td>
+                            </tr>
+                            <tr>
+                                <td class="first">Ecuador</td>
+                                <td><button id="6" onclick="updateResult(6)">vs.</button></td>
+                                <td class="second">Senegal</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="column">
+                        <table id="TableA">
+                            <tr>
+                                <th>Team</th>
+                                <th>Points</th>
+                            </tr>
+                            <tr id="Qatar">
+                                <td>Qatar</td>
+                                <td class="Points">0</td>
+                            </tr>
+                            <tr id="Ecuador">
+                                <td>Ecuador</td>
+                                <td class="Points">3</td>
+                            </tr>
+                            <tr id="Senegal">
+                                <td>Senegal</td>
+                                <td class="Points">0</td>
+                            </tr>
+                            <tr id="Netherlands">
+                                <td>Netherlands</td>
+                                <td class="Points">0</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+
+                <br id="GroupB">
+
+                <div id="B" class="row">
+                    <h2>Group B</h2>
+                    <div class="column">
+                        <table>
+                            <tr>
+                                <td class="first">England</td>
+                                <td><button id="7" onclick="updateResult(7)">vs.</button></td>
+                                <td class="second">Iran</td>
+                            </tr>
+                            <tr>
+                                <td class="first">USA</td>
+                                <td><button id="8" onclick="updateResult(8)">vs.</button></td>
+                                <td class="second">Wales</td>
+                            </tr>
+                            <tr>
+                                <td class="first">England</td>
+                                <td><button id="9" onclick="updateResult(9)">vs.</button></td>
+                                <td class="second">USA</td>
+                            </tr>
+                            <tr>
+                                <td class="first">Wales</td>
+                                <td><button id="10" onclick="updateResult(10)">vs.</button></td>
+                                <td class="second">Iran</td>
+                            </tr>
+                            <tr>
+                                <td class="first">Wales</td>
+                                <td><button id="11" onclick="updateResult(11)">vs.</button></td>
+                                <td class="second">England</td>
+                            </tr>
+                            <tr>
+                                <td class="first">Iran</td>
+                                <td><button id="12" onclick="updateResult(12)">vs.</button></td>
+                                <td class="second">USA</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="column">
+                        <table id="TableB">
+                            <tr>
+                                <th>Team</th>
+                                <th>Points</th>
+                            </tr>
+                            <tr id="England">
+                                <td>England</td>
+                                <td class="Points">0</td>
+                            </tr>
+                            <tr id="Iran">
+                                <td>Iran</td>
+                                <td class="Points">0</td>
+                            </tr>
+                            <tr id="USA">
+                                <td>USA</td>
+                                <td class="Points">0</td>
+                            </tr>
+                            <tr id="Wales">
+                                <td>Wales</td>
+                                <td class="Points">0</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+
+                <br id="GroupC">
+
+                <div id="C" class="row">
+                    <h2>Group C</h2>
+                    <div class="column">
+                        <table>
+                            <tr>
+                                <td class="first">Argentina</td>
+                                <td><button id="13" onclick="updateResult(13)">vs.</button></td>
+                                <td class="second">Saudi Arabia</td>
+                            </tr>
+                            <tr>
+                                <td class="first">Mexico</td>
+                                <td><button id="14" onclick="updateResult(14)">vs.</button></td>
+                                <td class="second">Poland</td>
+                            </tr>
+                            <tr>
+                                <td class="first">Argentina</td>
+                                <td><button id="15" onclick="updateResult(15)">vs.</button></td>
+                                <td class="second">Mexico</td>
+                            </tr>
+                            <tr>
+                                <td class="first">Poland</td>
+                                <td><button id="16" onclick="updateResult(16)">vs.</button></td>
+                                <td class="second">Saudi Arabia</td>
+                            </tr>
+                            <tr>
+                                <td class="first">Poland</td>
+                                <td><button id="17" onclick="updateResult(17)">vs.</button></td>
+                                <td class="second">Argentina</td>
+                            </tr>
+                            <tr>
+                                <td class="first">Saudi Arabia</td>
+                                <td><button id="18" onclick="updateResult(18)">vs.</button></td>
+                                <td class="second">Mexico</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="column">
+                        <table id="TableC">
+                            <tr>
+                                <th>Team</th>
+                                <th>Points</th>
+                            </tr>
+                            <tr id="Argentina">
+                                <td>Argentina</td>
+                                <td class="Points">0</td>
+                            </tr>
+                            <tr id="Saudi Arabia">
+                                <td>Saudi Arabia</td>
+                                <td class="Points">0</td>
+                            </tr>
+                            <tr id="Mexico">
+                                <td>Mexico</td>
+                                <td class="Points">0</td>
+                            </tr>
+                            <tr id="Poland">
+                                <td>Poland</td>
+                                <td class="Points">0</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+
+                <br id="GroupD">
+
+                <div id="D" class="row">
+                    <h2>Group D</h2>
+                    <div class="column">
+                        <table>
+                            <tr>
+                                <td class="first">France</td>
+                                <td><button id="19" onclick="updateResult(19)">vs.</button></td>
+                                <td class="second">Australia</td>
+                            </tr>
+                            <tr>
+                                <td class="first">Denmark</td>
+                                <td><button id="20" onclick="updateResult(20)">vs.</button></td>
+                                <td class="second">Tunisia</td>
+                            </tr>
+                            <tr>
+                                <td class="first">France</td>
+                                <td><button id="21" onclick="updateResult(21)">vs.</button></td>
+                                <td class="second">Denmark</td>
+                            </tr>
+                            <tr>
+                                <td class="first">Tunisia</td>
+                                <td><button id="22" onclick="updateResult(22)">vs.</button></td>
+                                <td class="second">Australia</td>
+                            </tr>
+                            <tr>
+                                <td class="first">Tunisia</td>
+                                <td><button id="23" onclick="updateResult(23)">vs.</button></td>
+                                <td class="second">France</td>
+                            </tr>
+                            <tr>
+                                <td class="first">Australia</td>
+                                <td><button id="24" onclick="updateResult(24)">vs.</button></td>
+                                <td class="second">Denmark</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="column">
+                        <table id="TableD">
+                            <tr>
+                                <th>Team</th>
+                                <th>Points</th>
+                            </tr>
+                            <tr id="France">
+                                <td>France</td>
+                                <td class="Points">0</td>
+                            </tr>
+                            <tr id="Australia">
+                                <td>Australia</td>
+                                <td class="Points">0</td>
+                            </tr>
+                            <tr id="Denmark">
+                                <td>Denmark</td>
+                                <td class="Points">0</td>
+                            </tr>
+                            <tr id="Tunisia">
+                                <td>Tunisia</td>
+                                <td class="Points">0</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+
+                <br id="GroupE">
+
+                <div id="E" class="row">
+                    <h2>Group E</h2>
+                    <div class="column">
+                        <table>
+                            <tr>
+                                <td class="first">Spain</td>
+                                <td><button id="25" onclick="updateResult(25)">vs.</button></td>
+                                <td class="second">Costa Rica</td>
+                            </tr>
+                            <tr>
+                                <td class="first">Germany</td>
+                                <td><button id="26" onclick="updateResult(26)">vs.</button></td>
+                                <td class="second">Japan</td>
+                            </tr>
+                            <tr>
+                                <td class="first">Spain</td>
+                                <td><button id="27" onclick="updateResult(27)">vs.</button></td>
+                                <td class="second">Germany</td>
+                            </tr>
+                            <tr>
+                                <td class="first">Japan</td>
+                                <td><button id="28" onclick="updateResult(28)">vs.</button></td>
+                                <td class="second">Costa Rica</td>
+                            </tr>
+                            <tr>
+                                <td class="first">Japan</td>
+                                <td><button id="29" onclick="updateResult(29)">vs.</button></td>
+                                <td class="second">Spain</td>
+                            </tr>
+                            <tr>
+                                <td class="first">Costa Rica</td>
+                                <td><button id="30" onclick="updateResult(30)">vs.</button></td>
+                                <td class="second">Germany</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="column">
+                        <table id="TableE">
+                            <tr>
+                                <th>Team</th>
+                                <th>Points</th>
+                            </tr>
+                            <tr id="Spain">
+                                <td>Spain</td>
+                                <td class="Points">0</td>
+                            </tr>
+                            <tr id="Costa Rica">
+                                <td>Costa Rica</td>
+                                <td class="Points">0</td>
+                            </tr>
+                            <tr id="Germany">
+                                <td>Germany</td>
+                                <td class="Points">0</td>
+                            </tr>
+                            <tr id="Japan">
+                                <td>Japan</td>
+                                <td class="Points">0</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+
+                <br id="GroupF">
+
+                <div id="F" class="row">
+                    <h2>Group F</h2>
+                    <div class="column">
+                        <table>
+                            <tr>
+                                <td class="first">Belgium</td>
+                                <td><button id="31" onclick="updateResult(31)">vs.</button></td>
+                                <td class="second">Canada</td>
+                            </tr>
+                            <tr>
+                                <td class="first">Morocco</td>
+                                <td><button id="32" onclick="updateResult(32)">vs.</button></td>
+                                <td class="second">Croatia</td>
+                            </tr>
+                            <tr>
+                                <td class="first">Belgium</td>
+                                <td><button id="33" onclick="updateResult(33)">vs.</button></td>
+                                <td class="second">Morocco</td>
+                            </tr>
+                            <tr>
+                                <td class="first">Croatia</td>
+                                <td><button id="34" onclick="updateResult(34)">vs.</button></td>
+                                <td class="second">Canada</td>
+                            </tr>
+                            <tr>
+                                <td class="first">Croatia</td>
+                                <td><button id="35" onclick="updateResult(35)">vs.</button></td>
+                                <td class="second">Belgium</td>
+                            </tr>
+                            <tr>
+                                <td class="first">Canada</td>
+                                <td><button id="36" onclick="updateResult(36)">vs.</button></td>
+                                <td class="second">Morocco</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="column">
+                        <table id="TableF">
+                            <tr>
+                                <th>Team</th>
+                                <th>Points</th>
+                            </tr>
+                            <tr id="Belgium">
+                                <td>Belgium</td>
+                                <td class="Points">0</td>
+                            </tr>
+                            <tr id="Canada">
+                                <td>Canada</td>
+                                <td class="Points">0</td>
+                            </tr>
+                            <tr id="Morocco">
+                                <td>Morocco</td>
+                                <td class="Points">0</td>
+                            </tr>
+                            <tr id="Croatia">
+                                <td>Croatia</td>
+                                <td class="Points">0</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+
+                <br id="GroupG">
+
+                <div id="G" class="row">
+                    <h2>Group G</h2>
+                    <div class="column">
+                        <table>
+                            <tr>
+                                <td class="first">Brazil</td>
+                                <td><button id="37" onclick="updateResult(37)">vs.</button></td>
+                                <td class="second">Serbia</td>
+                            </tr>
+                            <tr>
+                                <td class="first">Switzerland</td>
+                                <td><button id="38" onclick="updateResult(38)">vs.</button></td>
+                                <td class="second">Cameroon</td>
+                            </tr>
+                            <tr>
+                                <td class="first">Brazil</td>
+                                <td><button id="39" onclick="updateResult(39)">vs.</button></td>
+                                <td class="second">Switzerland</td>
+                            </tr>
+                            <tr>
+                                <td class="first">Cameroon</td>
+                                <td><button id="40" onclick="updateResult(40)">vs.</button></td>
+                                <td class="second">Serbia</td>
+                            </tr>
+                            <tr>
+                                <td class="first">Cameroon</td>
+                                <td><button id="41" onclick="updateResult(41)">vs.</button></td>
+                                <td class="second">Brazil</td>
+                            </tr>
+                            <tr>
+                                <td class="first">Serbia</td>
+                                <td><button id="42" onclick="updateResult(42)">vs.</button></td>
+                                <td class="second">Switzerland</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="column">
+                        <table id="TableG">
+                            <tr>
+                                <th>Team</th>
+                                <th>Points</th>
+                            </tr>
+                            <tr id="Brazil">
+                                <td>Brazil</td>
+                                <td class="Points">0</td>
+                            </tr>
+                            <tr id="Serbia">
+                                <td>Serbia</td>
+                                <td class="Points">0</td>
+                            </tr>
+                            <tr id="Switzerland">
+                                <td>Switzerland</td>
+                                <td class="Points">0</td>
+                            </tr>
+                            <tr id="Cameroon">
+                                <td>Cameroon</td>
+                                <td class="Points">0</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+
+                <br id="GroupH">
+
+                <div id="H" class="row">
+                    <h2>Group H</h2>
+                    <div class="column">
+                        <table>
+                            <tr>
+                                <td class="first">Portugal</td>
+                                <td><button id="43" onclick="updateResult(43)">vs.</button></td>
+                                <td class="second">Ghana</td>
+                            </tr>
+                            <tr>
+                                <td class="first">Uruguay</td>
+                                <td><button id="44" onclick="updateResult(44)">vs.</button></td>
+                                <td class="second">Korea Republic</td>
+                            </tr>
+                            <tr>
+                                <td class="first">Portugal</td>
+                                <td><button id="45" onclick="updateResult(45)">vs.</button></td>
+                                <td class="second">Uruguay</td>
+                            </tr>
+                            <tr>
+                                <td class="first">Korea Republic</td>
+                                <td><button id="46" onclick="updateResult(46)">vs.</button></td>
+                                <td class="second">Ghana</td>
+                            </tr>
+                            <tr>
+                                <td class="first">Korea Republic</td>
+                                <td><button id="47" onclick="updateResult(47)">vs.</button></td>
+                                <td class="second">Portugal</td>
+                            </tr>
+                            <tr>
+                                <td class="first">Ghana</td>
+                                <td><button id="48" onclick="updateResult(48)">vs.</button></td>
+                                <td class="second">Uruguay</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="column">
+                        <table id="TableH">
+                            <tr>
+                                <th>Team</th>
+                                <th>Points</th>
+                            </tr>
+                            <tr id="Portugal">
+                                <td>Portugal</td>
+                                <td class="Points">0</td>
+                            </tr>
+                            <tr id="Ghana">
+                                <td>Ghana</td>
+                                <td class="Points">0</td>
+                            </tr>
+                            <tr id="Uruguay">
+                                <td>Uruguay</td>
+                                <td class="Points">0</td>
+                            </tr>
+                            <tr id="Korea Republic">
+                                <td>Korea Republic</td>
+                                <td class="Points">0</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+
+
+                <!--Round of 16-->
+                <br>
+                <div id="PlayOffs">
+                <div id="R16" class="row">
+                    <h1>Round of 16</h1>
+                    <div class="column">
+                        <table>
+                            <tr>
+                                <td id="1A"class="first">1A</td>
+                                <td><button id="49" onclick="updateNoTies(49)">vs.</button></td>
+                                <td id="2B" class="second">2B</td>
+                            </tr>
+                            <tr>
+                                <td id="1C" class="first">1C</td>
+                                <td><button id="50" onclick="updateNoTies(50)">vs.</button></td>
+                                <td id="2D" class="second">2D</td>
+                            </tr>
+                        </table>
+                        <br>
+                        <table>
+                            <tr>
+                                <td id="1B" class="first">1B</td>
+                                <td><button id="51" onclick="updateNoTies(51)">vs.</button></td>
+                                <td id="2A" class="second">2A</td>
+                            </tr>
+                            <tr>
+                                <td id="1D" class="first">1D</td>
+                                <td><button id="52" onclick="updateNoTies(52)">vs.</button></td>
+                                <td id="2C" class="second">2C</td>
+                            </tr>
+                        </table>
+                        <br>
+
+                    </div>
+                    <div class="column">
+                        <table>
+                            <tr>
+                                <td id="1E" class="first">1E</td>
+                                <td><button id="53" onclick="updateNoTies(53)">vs.</button></td>
+                                <td id="2F" class="second">2F</td>
+                            </tr>
+                            <tr>
+                                <td id="1G" class="first">1G</td>
+                                <td><button id="54" onclick="updateNoTies(54)">vs.</button></td>
+                                <td id="2H" class="second">2H</td>
+                            </tr>
+                        </table>
+                        <br>
+                        <table>
+                            <tr>
+                                <td id="1F" class="first">1F</td>
+                                <td><button id="55" onclick="updateNoTies(55)">vs.</button></td>
+                                <td id="2E" class="second">2E</td>
+                            </tr>
+                            <tr>
+                                <td id="1H" class="first">1H</td>
+                                <td><button id="56" onclick="updateNoTies(56)">vs.</button></td>
+                                <td id="2G" class="second">2G</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+
+                <!--Quarter Final-->
+                <br>
+                <br>
+                <div id="R8" class="row">
+                    <h1>Quarter Final</h1>
+                    <div class="column">
+                        <table>
+                            <tr>
+                                <td id="W49"class="first">1A/2B</td>
+                                <td><button id="57" onclick="updateNoTies(57)">vs.</button></td>
+                                <td id="W50" class="second">1C/2D</td>
+                            </tr>
+                        </table>
+                        <br>
+                        <table>
+                            <tr>
+                                <td id="W51" class="first">1B/2A</td>
+                                <td><button id="59" onclick="updateNoTies(58)">vs.</button></td>
+                                <td id="W52" class="second">1D/2C</td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <!--Quarter Final Right table-->
+                    <div class="column">
+                        <table>
+                            <tr>
+                                <td id="W53" class="first">1E/2F</td>
+                                <td><button id="58" onclick="updateNoTies(59)">vs.</button></td>
+                                <td id="W54" class="second">1G/2H</td>
+                            </tr>
+                        </table>
+                        <br>
+                        <table>
+                            <tr>
+                                <td id="W55" class="first">1F/2E</td>
+                                <td><button id="60" onclick="updateNoTies(60)">vs.</button></td>
+                                <td id="W56" class="second">1H/2G</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+
+                <!--SemiFinal-->
+                <br>
+                <br>
+                <div id="R4" class="row">
+                    <h1>Semifinal</h1>
+                    <div class="column">
+                        <table>
+                            <tr>
+                                <td id="W57"class="first">1A/2B/1C/2D</td>
+                                <td><button id="61" onclick="updateNoTies(61)">vs.</button></td>
+                                <td id="W58" class="second">1B/2A/1D/2C</td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <!--SemiFinal Right table-->
+                    <div class="column">
+                        <table>
+                            <tr>
+                                <td id="W59" class="first">1E/2F/1G/2H</td>
+                                <td><button id="62" onclick="updateNoTies(62)">vs.</button></td>
+                                <td id="W60" class="second">1F/2E/1H/2G</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+
+                <!--Final-->
+                <br>
+                <br>
+                    <h1 id="final">Final</h1>
+                        <table>
+                            <tr>
+                                <td id="W61"class="first">1A/2B/1C/2D/1B/2A/1D/2C</td>
+                                <td><button id="63" onclick="updateNoTies(63)">vs.</button></td>
+                                <td id="W62" class="second">1E/2F/1G/2H/1F/2E/1H/2G</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="button">
+                        <br>
+                        <button onClick="printFunction()">Print</button>
+                    </div>
+
+            </div>
+        </div>
+        <script>
+            sort("A");
+            load16page("A");
+        </script>
+    </body>
+</html>
